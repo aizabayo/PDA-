@@ -1,0 +1,74 @@
+<!doctype html>
+<html>
+	<head>
+		<title>Application for Customer Segmentation</title>
+		<style type="text/css">
+			body {
+				color: black;
+			}
+
+			h2 {
+				color: black;
+			}
+
+			p {
+				color: black;
+				text-align: justify;
+			}
+
+			.results {
+				color: blue;
+			}
+
+			.introdiv {
+				margin: auto;
+				height: 160px;
+				width: 60%;
+				background-color: lightblue;
+				text-align: left;
+				padding: 8px;
+			}
+
+			.resultdiv {
+				margin: auto;
+				height: 160px;
+				width: 60%;
+				background-color: ivory;
+				text-align: left;
+				padding: 8px;
+			}
+
+			.center {
+				margin: auto;
+				width: 60%;
+				height: 85%;
+				border: 1px dashed blue;
+				padding: 15px;
+				background-color: lavender;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="center">
+			<div class="introdiv">
+				<h2>The Customer Level Group</h2>
+				<p>
+					This is an application that display customer segmentation with (17) attributes.
+					The user will enter a set of values in the range 1-18. The system displays Either Cluster 1, 2, or 3.
+				</p>
+			</div>
+
+			<div class="resultdiv">
+				<!-- https://flask.palletsprojects.com/en/2.3.x/patterns/flashing/ -->
+				<h2>Display Prediction Results</h2>
+				<p class="results">Customer group (Cluster): <span style="color:{{ color_signal }};">{{ prediction }}</span></p>
+
+				{% with messages = get_flashed_messages() %}
+					{% if messages %}
+						<p class="results">Customer Level (By retrieving from flashed messages): <span style="color:{{ messages[1] }};">{{ messages[0] }}</span></p>
+					{% endif %}
+				{% endwith %}
+			</div>
+		</div>
+	</body>
+</html>

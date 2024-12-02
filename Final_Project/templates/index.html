@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Segmentation Prediction</title>
+    <style type="text/css">
+        body {
+            color: black;
+        }
+
+        h2 {
+            color: black;
+        }
+
+        p {
+            color: black;
+            text-align: justify;
+        }
+
+        .results {
+            color: blue;
+        }
+
+        .introdiv {
+            margin: auto;
+            height: 80px;
+            width: 50%;
+            background-color: lavenda;
+            text-align: left;
+            padding: 5px;
+        }
+
+        .formdiv {
+            margin: auto;
+            height: 480px;
+            width: 80%;
+            background-color: tan ;
+            padding: 15px;
+        }
+
+        .center {
+            margin: auto;
+            width: 50%;
+            height: 85%;
+            border: 1px dashed skyblue;
+            padding: 10px;
+            background-color: lavender;
+        }
+        
+    </style>
+</head>
+
+<body>
+    <div class="center">
+        <div class="introdiv">
+            <h2></h2>
+            <p>
+            
+            </p>
+        </div>
+
+        <div class="formdiv">
+            <h1>Customer Segmentation Prediction</h1>
+            <form action="/predict" method="post">
+                <label for="BALANCE">BALANCE (1 - 18):</label>
+                <input type="text" id="BALANCE" name="BALANCE" required><br>
+
+                <label for="BALANCE_FREQUENCY">BALANCE FREQUENCY (1 - 18):</label>
+                <input type="text" id="BALANCE_FREQUENCY" name="BALANCE_FREQUENCY" required><br>
+
+                <label for="PURCHASES">PURCHASES (1 - 18):</label>
+                <input type="text" id="PURCHASES" name="PURCHASES" required><br>
+
+                <label for="ONEOFF_PURCHASES">ONEOFF_PURCHASES (1 - 18):</label>
+                <input type="text" id="ONEOFF_PURCHASES" name="ONEOFF_PURCHASES" required><br>
+
+                <label for="INSTALLMENTS_PURCHASES">INSTALLMENTS_PURCHASES (1 - 18):</label>
+                <input type="text" id="INSTALLMENTS_PURCHASES" name="INSTALLMENTS_PURCHASES" required><br>
+
+                <label for="CASH_ADVANCE">CASH_ADVANCE (1 - 18):</label>
+                <input type="text" id="CASH_ADVANCE" name="CASH_ADVANCE" required><br>
+
+                <label for="PURCHASES_FREQUENCY">PURCHASES_FREQUENCY (1 - 18):</label>
+                <input type="text" id="PURCHASES_FREQUENCY" name="PURCHASES_FREQUENCY" required><br>
+
+                <label for="ONEOFF_PURCHASES_FREQUENCY">ONEOFF_PURCHASES_FREQUENCY (1 - 18):</label>
+                <input type="text" id="ONEOFF_PURCHASES_FREQUENCY" name="ONEOFF_PURCHASES_FREQUENCY" required><br>
+
+                <label for="PURCHASES_INSTALLMENTS_FREQUENCY">PURCHASES_INSTALLMENTS_FREQUENCY (1 - 18):</label>
+                <input type="text" id="PURCHASES_INSTALLMENTS_FREQUENCY" name="PURCHASES_INSTALLMENTS_FREQUENCY" required><br>
+
+                <label for="CASH_ADVANCE_FREQUENCY">CASH_ADVANCE_FREQUENCY (1 - 18):</label>
+                <input type="text" id="CASH_ADVANCE_FREQUENCY" name="CASH_ADVANCE_FREQUENCY" required><br>
+
+                <label for="CASH_ADVANCE_TRX">CASH_ADVANCE_TRX (1 - 18):</label>
+                <input type="text" id="CASH_ADVANCE_TRX" name="CASH_ADVANCE_TRX" required><br>
+
+                <label for="PURCHASES_TRX">PURCHASES_TRX (1 - 18):</label>
+                <input type="text" id="PURCHASES_TRX" name="PURCHASES_TRX" required><br>
+
+                <label for="CREDIT_LIMIT">CREDIT_LIMIT (1 - 18):</label>
+                <input type="text" id="CREDIT_LIMIT" name="CREDIT_LIMIT" required><br>
+
+                <label for="PAYMENTS">PAYMENTS (1 - 18):</label>
+                <input type="text" id="PAYMENTS" name="PAYMENTS" required><br>
+
+                <label for="MINIMUM_PAYMENTS">MINIMUM_PAYMENTS (1 - 18):</label>
+                <input type="text" id="MINIMUM_PAYMENTS" name="MINIMUM_PAYMENTS" required><br>
+
+                <label for="PRC_FULL_PAYMENT">PRC_FULL_PAYMENT (1 - 18):</label>
+                <input type="text" id="PRC_FULL_PAYMENT" name="PRC_FULL_PAYMENT" required><br>
+
+                <label for="TENURE">TENURE (1 - 18):</label>
+                <input type="text" id="TENURE" name="TENURE" required><br>
+
+                <input type="submit" value="Submit">
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>
